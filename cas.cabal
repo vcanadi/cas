@@ -1,0 +1,63 @@
+name:                cas
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/cas#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2017 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     
+                       Cas 
+  other-modules:       Cas.Internal.Def 
+                     , Cas.Internal.Def.Interface
+                     
+                     , Cas.Internal.Instances.TFunctor
+                     , Cas.Internal.Instances.TFoldable
+                     , Cas.Internal.Utils
+                     , Cas.Internal.Normalization
+                     , Cas.Internal.Interface
+
+                     , Cas.Instances.Show
+                     , Cas.Instances.Other
+                     , Cas.Interface
+
+                     , Cas.Misc
+                     , Cas.LinearSystem.Internal
+                     , Cas.LinearSystem
+                     , Cas.Rules
+                     , Cas.Graph
+
+                     , Cas.Misc.TH
+                     , Cas.Examples
+                     , Cas.QuickCheckTest
+
+  build-depends:       base >= 4.7 && < 5
+                     , containers
+                     , pretty-tree
+                     , containers
+                     , prelude-custom
+                     , mono-traversable
+                     , boxes
+                     , template-haskell
+                     , QuickCheck
+                     , complex-generic
+                     , utility-ht
+                     , mtl
+  default-language:    Haskell2010
+  default-extensions:  RecordWildCards
+                     , LambdaCase
+                     , NoImplicitPrelude
+                     
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/cas
